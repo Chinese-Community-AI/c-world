@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinatown Street Guide - Discover the Best of Chinatown NYC</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🏮 Chinatown Street Guide</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Discover the Best of Chinatown, NYC</h2>
+                <p class="hero-subtitle">Real rankings from real people. Find authentic food, shops, and experiences.</p>
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <div class="search-bar">
+                            <input type="text" id="searchInput" placeholder="Search restaurants, shops, or experiences...">
+                            <button id="searchBtn">Search</button>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div id="mapContainer" class="map-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h3>Browse by Category</h3>
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="restaurant">Restaurants</button>
+                    <button class="category-btn" data-category="bakery">Bakeries</button>
+                    <button class="category-btn" data-category="shop">Shops</button>
+                    <button class="category-btn" data-category="market">Markets</button>
+                    <button class="category-btn" data-category="dessert">Desserts</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="rankings">
+            <div class="container">
+                <h3>Top Rankings</h3>
+                <div class="ranking-tabs">
+                    <button class="tab-btn active" data-tab="popular">Most Popular</button>
+                    <button class="tab-btn" data-tab="rated">Highest Rated</button>
+                    <button class="tab-btn" data-tab="trending">Trending Now</button>
+                </div>
+                <div id="businessList" class="business-list">
+                    <!-- Businesses will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Chinatown Street Guide. Discover authentic experiences in Chinatown, NYC.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="data.js"></script>
+    <script src="map.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
